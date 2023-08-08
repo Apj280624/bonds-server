@@ -59,7 +59,6 @@ router.post("/register", async (req, res) => {
 
   console.log(regisForm);
 
-
   try {
     // hash password and update form
     const salt = await bcrypt.genSalt(vars.bcryptSaltRounds);

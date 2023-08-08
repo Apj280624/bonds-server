@@ -73,7 +73,7 @@ router.post("/login", async (req, res) => {
       .status(200)
       .json({ statusText: statusText.LOGIN_IN_SUCCESS, token: token });
   } catch (err) {
-    // console.log(err.message);
+    console.log(err.message);
     res.status(500).json({ statusText: statusText.INTERNAL_SERVER_ERROR });
   }
 });
