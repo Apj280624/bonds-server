@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const statusText = require("../utils/status_text");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const vars = require("../utils/constants");
 const Counterparty = require("../models/counterparty.model");
 
 router.get("/", async (req, res) => {
