@@ -74,4 +74,26 @@ router.post("/login", async (req, res) => {
   }
 });
 
-module.exports =  router ;
+router.post("/register", async (req, res) => {
+  console.log(req.originalUrl);
+  // manual validation not required, mongooose validation running
+
+  const regisForm = req.body;
+
+  console.log(regisForm);
+
+  try {
+    // hash password and update form
+    const salt = await bcrypt.genSalt(vars.bcryptSaltRounds);
+    regisForm.password = await bcrypt.hash(regisForm.password, salt);
+
+    await User.create(regisForm);
+
+    res.status(200).json({ statusText: statusText.REGISTRATION_SUCCESS });
+  } catch (err) {
+    // console.log(err.message);
+    res.status(500).json({ statusText: statusText.INTERNAL_SERVER_ERROR });
+  }
+});
+
+module.exports = router;

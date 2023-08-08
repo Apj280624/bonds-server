@@ -59,11 +59,6 @@ router.post("/register", async (req, res) => {
 
   console.log(regisForm);
 
-  /* 
-  todo:
-  regisForm contains an extra field cnfrmPass but only the fields in the schema will be saved by mongoose
-  we can remove the field for extra safety
-  */
 
   try {
     // hash password and update form
@@ -75,7 +70,6 @@ router.post("/register", async (req, res) => {
     res.status(200).json({ statusText: statusText.REGISTRATION_SUCCESS });
   } catch (err) {
     // console.log(err.message);
-    //! note: todo.txt contains the ways to get only the first error from mongoose so that we can return it directly to client
     res.status(500).json({ statusText: statusText.INTERNAL_SERVER_ERROR });
   }
 });
