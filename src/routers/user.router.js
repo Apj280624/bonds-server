@@ -4,6 +4,7 @@ const statusText = require("../utils/status_text");
 const User = require("../models/user.model");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const vars = require("../utils/constants");
 
 router.post("/login", async (req, res) => {
   let email = req.body.email;
@@ -46,6 +47,35 @@ router.post("/login", async (req, res) => {
       .json({ statusText: statusText.LOGIN_IN_SUCCESS, token: token });
   } catch (err) {
     // console.log(err.message);
+    res.status(500).json({ statusText: statusText.INTERNAL_SERVER_ERROR });
+  }
+});
+
+router.post("/register", async (req, res) => {
+  // console.log(req.originalUrl);
+  // manual validation not required, mongooose validation running
+
+  const regisForm = req.body;
+
+  // console.log(regisForm);
+
+  /* 
+  todo:
+  regisForm contains an extra field cnfrmPass but only the fields in the schema will be saved by mongoose
+  we can remove the field for extra safety
+  */
+
+  try {
+    // hash password and update form
+    const salt = await bcrypt.genSalt(vars.bcryptSaltRounds);
+    regisForm.password = await bcrypt.hash(regisForm.password, salt);
+
+    await User.create(regisForm);
+
+    res.status(200).json({ statusText: statusText.REGISTRATION_SUCCESS });
+  } catch (err) {
+    // console.log(err.message);
+    //! note: todo.txt contains the ways to get only the first error from mongoose so that we can return it directly to client
     res.status(500).json({ statusText: statusText.INTERNAL_SERVER_ERROR });
   }
 });
