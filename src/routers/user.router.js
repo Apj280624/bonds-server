@@ -33,7 +33,6 @@ router.post("/login", async (req, res) => {
 
     // generate token
     const data = {
-      exp: Math.floor(Date.now() / 1000) + vars.token.expiry.USER_IN_SEC,
       person: {
         mongoId: userDoc._id,
         role: "user",
