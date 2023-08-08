@@ -87,7 +87,7 @@ router.post("/register", async (req, res) => {
     const salt = await bcrypt.genSalt(vars.bcryptSaltRounds);
     regisForm.password = await bcrypt.hash(regisForm.password, salt);
 
-    await User.create(regisForm);
+    await Counterparty.create(regisForm);
 
     res.status(200).json({ statusText: statusText.REGISTRATION_SUCCESS });
   } catch (err) {
