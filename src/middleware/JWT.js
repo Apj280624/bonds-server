@@ -1,39 +1,51 @@
-require("dotenv").config();
-const tokenRouter = require("express").Router();
-const res = require("express/lib/response");
-const JWT = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 
-async function generateToken(user) {
-  const token = await JWT.sign(
-    {
-      id: user._id,
-    },
-    process.env.Secret,
-    {
-      expiresIn: 600000000000,
-    }
-  );
-  return token;
-}
+// My models
 
-async function checkToken(req, res, next) {
-  const token = req.headers["authorization"];
+////////////////////////////////////////////////////////////////////////////////////////
+
+const fetchPerson = (req, res, next) => {
+  const token = req.header("auth-token");
   // console.log(token);
+  // * if token is verified then the mongoId contained in the token always belongs to some user doc
+
   if (!token) {
-    return res.status(400).json({
-      msg: "No token found",
-    });
+    return res
+      .status(401)
+      .send({ statusText: "TOKEN NOT FOUND" });
   }
 
   try {
-    const user = JWT.verify(token, process.env.Secret);
-    req.body.userID = user.id;
-  } catch (error) {
-    return res.status(400).json({
-      msg: "Token Invalid",
-    });
-  }
-  return next();
-}
+    const data = jwt.verify(token, process.env.JWT_SECRET);
+    req.mongoId = data.person.mongoId;
+    req.role = data.person.role;
 
-module.exports = { generateToken, checkToken };
+    // console.log(req.role);
+    next();
+  } catch (err) {
+    // console.log(err.message);
+
+    res.status(401).send({ statusText: "INVALID TOKEN" });
+  }
+};
+
+const isUser = (req, res, next) => {
+  // console.log(req.role);
+
+  if (req.role !== "user") {
+    return res.status(401).send({ statusText: "INVALID TOKEN" });
+  }
+  next();
+};
+
+const isCounterparty = (req, res, next) => {
+  // console.log(req.role);
+
+  if (req.role !== "counterparty") {
+    return res.status(401).send({ statusText: "INVALID TOKEN" });
+  }
+
+  next();
+};
+
+module.exports = { isUser, isCounterparty, fetchPerson };
