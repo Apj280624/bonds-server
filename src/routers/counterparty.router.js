@@ -59,8 +59,6 @@ router.post("/login", async (req, res) => {
 
     // generate token
     const data = {
-      exp:
-        Math.floor(Date.now() / 1000) + vars.token.expiry.counterparty_IN_SEC,
       person: {
         mongoId: counterpartyDoc._id,
         role: "counterparty",

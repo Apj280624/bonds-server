@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
     const allsecurity = await Security.find({});
     return res.send(allsecurity);
   } catch (error) {
-    res.status(401).send("security not found");
+    res.status(500).send(error.message);
   }
 });
 
@@ -22,7 +22,7 @@ router.get(`/:id`, async (req, res) => {
     }
     res.send(securityById);
   } catch (error) {
-    res.status(400).send(error.message);
+    res.status(500).send(error.message);
   }
 });
 
@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
 
     res.send(newSecurity);
   } catch (error) {
-    res.status(400).send(error.message);
+    res.status(500).send(error.message);
   }
 });
 
