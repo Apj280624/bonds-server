@@ -52,12 +52,12 @@ router.post("/login", async (req, res) => {
 });
 
 router.post("/register", async (req, res) => {
-  // console.log(req.originalUrl);
+  console.log(req.originalUrl);
   // manual validation not required, mongooose validation running
 
   const regisForm = req.body;
 
-  // console.log(regisForm);
+  console.log(regisForm);
 
   /* 
   todo:
