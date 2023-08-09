@@ -11,6 +11,18 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/flagged", async (req, res) => {
+  try {
+    const allsecurity = await Security.find({});
+    const flaggedSecurity = allsecurity.filter((security) => {
+       return security.status === "Matured"
+    });
+    res.send(flaggedSecurity);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+})
+
 router.get(`/:id`, async (req, res) => {
   try {
     const securityId = req.params.id;

@@ -19,7 +19,7 @@
     "status": "Matured",
     "maturityDate": "2020-03-20T16:17:07.632Z",
     "unitSize": 881,
-    "report": ""
+    "report": "Default by Issuer: The issuer's failure to meet obligations due to financial distress or other reasons."
   },
   {
     "isin": "3lj5txyuw",
@@ -41,7 +41,7 @@
     "status": "Matured",
     "maturityDate": "2021-09-25T02:23:23.107Z",
     "unitSize": 463,
-    "report": ""
+    "report": "Miscommunication: Poor communication between issuer and bondholders can lead to confusion about redemption details."
   },
   {
     "isin": "j6c1mfofz",
@@ -129,7 +129,7 @@
     "status": "Matured",
     "maturityDate": "2022-06-29T11:29:43.899Z",
     "unitSize": 396,
-    "report": ""
+    "report": "Bankruptcy: The issuer's bankruptcy status could result in bondholders facing challenges in receiving redemption payments."
   },
   {
     "isin": "8vl3n87km",
@@ -140,7 +140,7 @@
     "status": "Matured",
     "maturityDate": "2022-03-22T04:15:43.344Z",
     "unitSize": 441,
-    "report": ""
+    "report": "Fraudulent Activities: Fraud or mismanagement within the issuer can lead to redemption challenges."
   },
   {
     "isin": "6m1wuya4a",
@@ -162,7 +162,7 @@
     "status": "Matured",
     "maturityDate": "2022-11-02T09:44:17.160Z",
     "unitSize": 570,
-    "report": ""
+    "report": "Delay in Administrative Processes: Administrative delays can hinder the execution of redemption payments."
   },
   {
     "isin": "h4y2k0b7y",
@@ -250,7 +250,7 @@
     "status": "Matured",
     "maturityDate": "2021-09-25T22:06:17.631Z",
     "unitSize": 375,
-    "report": ""
+    "report": "Operational Disruptions: Operational issues or disruptions can prevent timely execution of redemption processes."
   },
   {
     "isin": "oueh4u6n0",
@@ -316,7 +316,7 @@
     "status": "Matured",
     "maturityDate": "2022-08-27T01:42:18.907Z",
     "unitSize": 642,
-    "report": ""
+    "report": "Bondholder Negligence: Bondholders not following proper procedures may lead to redemption delays."
   },
   {
     "isin": "ywrd6n0i7",
@@ -327,7 +327,7 @@
     "status": "Matured",
     "maturityDate": "2020-09-27T07:12:54.132Z",
     "unitSize": 345,
-    "report": ""
+    "report": "Delay in Administrative Processes: Administrative delays can hinder the execution of redemption payments."
   },
   {
     "isin": "73wih2bep",
@@ -349,7 +349,7 @@
     "status": "Matured",
     "maturityDate": "2020-11-16T03:01:13.991Z",
     "unitSize": 386,
-    "report": ""
+    "report": "Covenant Violations: Breach of bond covenants can result in restrictions on redemption activities."
   },
   {
     "isin": "d2jzreire",
@@ -426,7 +426,7 @@
     "status": "Matured",
     "maturityDate": "2021-07-13T08:12:32.311Z",
     "unitSize": 123,
-    "report": ""
+    "report": "Interest Rate Changes: Fluctuations in interest rates might affect the issuer's ability to meet redemption obligations."
   },
   {
     "isin": "dpyj8tnmb",
@@ -470,7 +470,7 @@
     "status": "Matured",
     "maturityDate": "2020-10-13T17:17:43.926Z",
     "unitSize": 616,
-    "report": ""
+    "report": "Lack of Liquidity: Insufficient liquidity could hinder the issuer from fulfilling redemption obligations."
   },
   {
     "isin": "gv5zev3h4",
@@ -591,7 +591,7 @@
     "status": "Matured",
     "maturityDate": "2022-02-01T00:17:56.752Z",
     "unitSize": 691,
-    "report": ""
+    "report": "Bondholder Negligence: Bondholders not following proper procedures may lead to redemption delays."
   },
   {
     "isin": "ox4fmsj3r",
@@ -624,7 +624,7 @@
     "status": "Matured",
     "maturityDate": "2022-09-17T13:41:33.152Z",
     "unitSize": 618,
-    "report": ""
+    "report": "Management Changes: Leadership transitions within the company could disrupt redemption plans and communication."
   },
   {
     "isin": "qwrfpw896",
@@ -745,7 +745,7 @@
     "status": "Matured",
     "maturityDate": "2020-04-02T16:15:11.967Z",
     "unitSize": 484,
-    "report": ""
+    "report": "Interest Rate Changes: Fluctuations in interest rates might affect the issuer's ability to meet redemption obligations."
   },
   {
     "isin": "2um5erpe2",
@@ -756,7 +756,7 @@
     "status": "Matured",
     "maturityDate": "2021-07-04T13:35:26.442Z",
     "unitSize": 208,
-    "report": ""
+    "report": "Currency Devaluation: Devaluation of the currency can impact the value of redemption payments for foreign bondholders."
   },
   {
     "isin": "kyont7wiu",
@@ -844,7 +844,7 @@
     "status": "Matured",
     "maturityDate": "2023-07-09T06:17:15.566Z",
     "unitSize": 345,
-    "report": ""
+    "report": "Covenant Violations: Breach of bond covenants can result in restrictions on redemption activities."
   },
   {
     "isin": "8oc3ddban",
@@ -954,7 +954,7 @@
     "status": "Matured",
     "maturityDate": "2021-11-03T17:06:00.629Z",
     "unitSize": 932,
-    "report": ""
+    "report": "Bondholder Negligence: Bondholders not following proper procedures may lead to redemption delays."
   },
   {
     "isin": "ygrmcxcxd",
@@ -965,7 +965,7 @@
     "status": "Matured",
     "maturityDate": "2021-06-18T20:38:57.305Z",
     "unitSize": 644,
-    "report": ""
+    "report": "Covenant Violations: Breach of bond covenants can result in restrictions on redemption activities."
   },
   {
     "isin": "sgf5nwuk8",
@@ -1086,7 +1086,7 @@
     "status": "Matured",
     "maturityDate": "2021-07-11T19:31:56.403Z",
     "unitSize": 160,
-    "report": ""
+    "report": "Maturity Extension: The issuer might extend bond maturity dates, delaying redemption."
   },
   {
     "isin": "011hr2pb6",
