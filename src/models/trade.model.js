@@ -2,24 +2,20 @@ const mongoose = require("mongoose");
 const Types = mongoose.Schema.Types;
 
 const tradeSchema = new mongoose.Schema({
-  bookId: {
-    type: Types.ObjectId,
+  buyer: {
+    type: String,
     required: true,
   },
-  buyerId: {
-    type: Types.ObjectId,
+  seller: {
+    type: String,
     required: true,
   },
-  sellerId: {
-    type: Types.ObjectId,
-    required: true,
-  },
-  securityId: {
-    type: Types.ObjectId,
+  securityName: {
+    type: String,
     required: true,
   },
   quantity: {
-    type: String,
+    type: Number,
     required: true,
   },
   status: {
@@ -27,7 +23,7 @@ const tradeSchema = new mongoose.Schema({
     required: true,
   },
   price: {
-    type: String,
+    type: Number,
     required: true,
   },
   tradeDate: {
@@ -36,7 +32,6 @@ const tradeSchema = new mongoose.Schema({
   },
   settlementDate: {
     type: Date,
-    required: true,
   },
 });
 
